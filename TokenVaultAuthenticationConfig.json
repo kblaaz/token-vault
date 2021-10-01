@@ -1,0 +1,7 @@
+﻿{
+    "TokenVaultAuthentication": {
+        "Type": "TokenVaultAuthenticator",
+        "VaultPath": "Deployment\\Example\\Tokens\\tokens.vault",
+        "VaultKey": "xxx"
+    }
+}
