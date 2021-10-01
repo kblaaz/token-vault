@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<UseWPF>true</UseWPF>
+	<Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aveva.Gdp.TokenVault.Api\Aveva.Gdp.TokenVault.Api.csproj" />
+    <ProjectReference Include="..\Aveva.Gdp.TokenVault\Aveva.Gdp.TokenVault.csproj" />
+  </ItemGroup>
+
+</Project>

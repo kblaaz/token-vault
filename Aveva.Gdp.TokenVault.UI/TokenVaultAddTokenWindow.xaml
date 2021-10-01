@@ -1,0 +1,26 @@
+﻿<Window x:Class="Aveva.Gdp.TokenVault.UI.TokenVaultAddTokenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Add token" SizeToContent="Height" Width="500" ResizeMode="NoResize">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="35" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row ="0" Grid.Column="0" Content="Token" HorizontalContentAlignment="Right" />
+        <TextBox x:Name="tokenBox" Grid.Row="0" FontSize="15" Grid.Column="1" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+        <Label Grid.Row ="1" Grid.Column="0" Content="Description" HorizontalContentAlignment="Right" />
+        <TextBox x:Name="descriptionBox" Grid.Row="1" FontSize="15" Grid.Column="1" TextWrapping="Wrap" Text="{Binding Description}" MaxLength="100" VerticalScrollBarVisibility="Auto" />
+        <Label Grid.Row="2" Foreground="DarkGoldenrod" FontSize="11" Width="Auto" Grid.Column="1" Content="{Binding Message}" />
+        <Button Grid.Row="3" Content="Generate" Width="90" Height="25" Command="{Binding GenerateCommand}" CommandParameter="{Binding Text, ElementName=tokenBox}" Grid.Column="0" Grid.ColumnSpan="2" />
+    </Grid>
+</Window>
